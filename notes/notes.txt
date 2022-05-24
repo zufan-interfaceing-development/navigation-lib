@@ -1,0 +1,29 @@
+mkdir <projectName>
+cd <projectName>
+    npm init
+    npm install react react-dom --save-dev
+    mkdir src
+    cd src
+        mkdir component
+        cd component
+            touch index.js
+
+Mod package.json
++   "devDependencies": {
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0"
+>       "@babel/preset-react": "^7.17.12",
+>        "prop-types": "^15.8.1"
+    }
++   "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
+        "build-storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook"
+    },
+
+# Add Storybook:
+npx sb init
+
+"storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
+"build-storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook"
+

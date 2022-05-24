@@ -1,0 +1,73 @@
+npm install prop-types --save-dev or npm install prop-types??
+what is --save-dev?
+
+react-dom is a render for react
+
+dependencies and devDependencies and peerdependencies
+
+dependencies
+    When someone installs YOUR package, everything under dependencies will be installed
+devDependencies
+    When someone installs YOUR package, everything under devDependencies will be NOT BE installed
+    Any package you need for devlopment or testing your code is placed under devDependencies
+peerdependencies
+    You olny need to use peerdependencies when your devloping packages
+    Every package under peerdependencies is expected when someone installes your package
+
+
+??parcel and parcel-bundler and babel and postcss and rollup-plugin-postcss??
+
+parcel
+    parcel is Bundler for your Projects
+    parcel is webpack competitor
+    parcel is devDependencies
+    npm install --save-dev parcel
+    Its Hot Module - Hot Module Replacement (HMR)
+    Application state can be retained as you change small things in your code.
+
+rollup-plugin-postcss
+ is a plugin for rollup that lets you use postcss
+
+postcss-import
+postcss-uncss
+postcss-module
+ npm i -D postcss-modules postcss-uncss uncss
+ npm uninstall -D postcss-modules postcss-uncss uncss
+
+npm i -D rollup-plugin-purgecss
+npm uninstall -D rollup-plugin-purgecss
+ npm i bootstrap react-bootstrap
+
+
+import purgecss from 'rollup-plugin-purgecss';
+{
+    file: 'dist/index.es.js',
+    format: 'es',
+    exports: 'named',
+} 
+purgecss({content: ['./**/*.html']}),
+
+purgecss({content: ['./**/*.html']}),
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import PropTypes from 'prop-types';
+
+NavItems.prototype={
+  lable:PropTypes.string,
+  onClick:PropTypes.func,
+  style:PropTypes.object,
+}
+
+NavigationBar.propTypes={
+  dark: PropTypes.bool,
+  brandName: PropTypes.string,
+  left: PropTypes.element, 
+  right: PropTypes.element
+}
+
+DropDownItem.prototype={
+  lable:PropTypes.object,
+  onClick:PropTypes.func,
+  title: PropTypes.string,
+}
