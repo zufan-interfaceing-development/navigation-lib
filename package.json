@@ -4,6 +4,10 @@
   "description": "navigation-library",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zufan-interfaceing-development/navigation-lib.git"
+  },
   "scripts": {
     "storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
     "build-storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
