@@ -3,7 +3,6 @@
 
 node_modules
 
-
 *.txt
 rollup.config.js
 postcss.config.js
