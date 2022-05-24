@@ -1,5 +1,5 @@
 {
-  "name": "@zufan/navigation",
+  "name": "@zufan/navigation-lib",
   "version": "1.0.0",
   "description": "navigation-library",
   "main": "dist/index.js",
