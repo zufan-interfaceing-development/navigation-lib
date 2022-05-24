@@ -1,6 +1,6 @@
 {
   "name": "@zufan_dev/navigation-lib",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "navigation-library",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
