@@ -3,7 +3,6 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function ZFNavigationBar({dark=true, brandName, left, center, right }){
   return(
@@ -25,24 +24,6 @@ function ZFNavigationBar({dark=true, brandName, left, center, right }){
 }
 
 
-
-function ZFNavItems ({lable, onClick, style}){
-  return <Nav.Link style={{padding:5}} onClick={onClick}>{lable}</Nav.Link>
-}
-
-
-function ZFDropDownItem({lable, title}){
-  return(
-    
-      <NavDropdown title={title} menuVariant="dark"  >
-        {lable.map((v, i)=>{
-          return  <NavDropdown.Item key={i} onClick={v.onClick}>{v.lable}</NavDropdown.Item>
-        })}
-      </NavDropdown>
-   
-  )
-}
-
-export {ZFNavigationBar, ZFNavItems, ZFDropDownItem}
+export default ZFNavigationBar;
 
 
