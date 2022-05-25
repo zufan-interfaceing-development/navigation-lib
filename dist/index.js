@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var React = require('react');
 var Container = require('react-bootstrap/Container');
 var Navbar = require('react-bootstrap/Navbar');
@@ -14,7 +12,7 @@ var Container__default = /*#__PURE__*/_interopDefaultLegacy(Container);
 var Navbar__default = /*#__PURE__*/_interopDefaultLegacy(Navbar);
 var Nav__default = /*#__PURE__*/_interopDefaultLegacy(Nav);
 
-const ZFNavigationBar = ({
+ZFNavigationBar = ({
   dark = true,
   brandName,
   left,
@@ -35,5 +33,3 @@ const ZFNavigationBar = ({
     className: "justify-content-between"
   }, /*#__PURE__*/React__default["default"].createElement(Nav__default["default"], null, left), /*#__PURE__*/React__default["default"].createElement(Nav__default["default"], null, center), /*#__PURE__*/React__default["default"].createElement(Nav__default["default"], null, right)))));
 };
-
-exports.ZFNavigationBar = ZFNavigationBar;

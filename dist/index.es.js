@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
-const ZFNavigationBar = ({
+ZFNavigationBar = ({
   dark = true,
   brandName,
   left,
@@ -24,5 +24,3 @@ const ZFNavigationBar = ({
     className: "justify-content-between"
   }, /*#__PURE__*/React.createElement(Nav, null, left), /*#__PURE__*/React.createElement(Nav, null, center), /*#__PURE__*/React.createElement(Nav, null, right)))));
 };
-
-export { ZFNavigationBar };
