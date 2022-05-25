@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
-const ZFNavigationBar = ({dark=true, brandName, left, center, right })=>{
+export const ZFNavigationBar = ({dark=true, brandName, left, center, right })=>{
   return(
     <Container fluid>
       <Navbar bg={dark?'dark':'light'} variant={dark?'dark':'light'} expand="lg">
@@ -22,4 +22,3 @@ const ZFNavigationBar = ({dark=true, brandName, left, center, right })=>{
     
   )
 }
-export default ZFNavigationBar
