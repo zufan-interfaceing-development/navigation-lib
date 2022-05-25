@@ -4,44 +4,46 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function NavigationBar({
+function ZFNavigationBar({
   dark = true,
   brandName,
   left,
   center,
   right
 }) {
-  return /*#__PURE__*/React.createElement(Navbar, {
+  return /*#__PURE__*/React.createElement(Container, {
+    fluid: true
+  }, /*#__PURE__*/React.createElement(Navbar, {
     bg: dark ? 'dark' : 'light',
     variant: dark ? 'dark' : 'light',
     expand: "lg"
   }, /*#__PURE__*/React.createElement(Container, {
     fluid: true
-  }, /*#__PURE__*/React.createElement(Nav, null, brandName ? /*#__PURE__*/React.createElement(Navbar.Brand, {
+  }, brandName ? /*#__PURE__*/React.createElement(Navbar.Brand, {
     href: "#"
-  }, brandName) : '', /*#__PURE__*/React.createElement(Navbar.Collapse, null, left)), /*#__PURE__*/React.createElement(Nav, {
-    className: "justify-content-center"
-  }, /*#__PURE__*/React.createElement(Navbar.Collapse, null, center)), /*#__PURE__*/React.createElement(Nav, {
-    className: "justify-content-end"
-  }, /*#__PURE__*/React.createElement(Navbar.Collapse, null, right)), /*#__PURE__*/React.createElement(Navbar.Toggle, null)));
+  }, brandName) : '', /*#__PURE__*/React.createElement(Navbar.Toggle, null), /*#__PURE__*/React.createElement(Navbar.Collapse, {
+    className: "justify-content-between"
+  }, /*#__PURE__*/React.createElement(Nav, null, left), /*#__PURE__*/React.createElement(Nav, null, center), /*#__PURE__*/React.createElement(Nav, null, right)))));
 }
 
-function NavItems({
+function ZFNavItems({
   lable,
   onClick,
   style
 }) {
   return /*#__PURE__*/React.createElement(Nav.Link, {
-    style: style,
+    style: {
+      padding: 5
+    },
     onClick: onClick
   }, lable);
 }
 
-function DropDownItem({
+function ZFDropDownItem({
   lable,
   title
 }) {
-  return /*#__PURE__*/React.createElement(Nav, null, /*#__PURE__*/React.createElement(NavDropdown, {
+  return /*#__PURE__*/React.createElement(NavDropdown, {
     title: title,
     menuVariant: "dark"
   }, lable.map((v, i) => {
@@ -49,7 +51,7 @@ function DropDownItem({
       key: i,
       onClick: v.onClick
     }, v.lable);
-  })));
+  }));
 }
 
-export { DropDownItem, NavItems, NavigationBar };
+export { ZFDropDownItem, ZFNavItems, ZFNavigationBar };
