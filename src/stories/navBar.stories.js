@@ -1,5 +1,5 @@
 import React from "react"
-import ZFNavigationBar from "../components/Navagtion/navigation-bar"
+import {ZFNavigationBar} from "../components/Navagtion/navigation-bar"
 import ZFNavItems from "../components/Navagtion/items"
 import ZFDropDownItem from "../components/Navagtion/dropDown"
 export default {
