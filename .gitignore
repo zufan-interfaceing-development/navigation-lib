@@ -8,3 +8,7 @@ rollup.config.js
 postcss.config.js
 /notes
 *.txt
+
+.storybook
+pushToGit.sh
+publish.sh

@@ -2,7 +2,7 @@ import babel from 'rollup-plugin-babel'
 import resolve from '@rollup/plugin-node-resolve'
 import external from 'rollup-plugin-peer-deps-external'
 import postcss from 'rollup-plugin-postcss'; 
-import purgecss from 'rollup-plugin-purgecss';
+//import purgecss from 'rollup-plugin-purgecss';
 export default [
     {
         input: './src/index.js', //entry point
@@ -18,10 +18,6 @@ export default [
             }
         ],
         plugins: [
-            postcss({
-                plugins:[purgecss({content: ['./**/*.html']})],
-                minimize: true,
-            }),
             babel({
                 exclude: 'node_modules/**',
                 presets: ['@babel/preset-react']
