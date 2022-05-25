@@ -7,16 +7,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const styles = {
-  border: '3px solid red', 
-};
-
-
-
-
 export const ZFNavigationBar = ({dark=true, brandName, left, center, right })=>{
   return(
-    <Container fluid>
+    <Container fluid style={{border: '3px solid red'}}>
       <Navbar bg={dark?'dark':'light'} variant={dark?'dark':'light'} expand="lg">
         <Container fluid>
           {brandName?<Navbar.Brand href="#">{brandName}</Navbar.Brand>:''}

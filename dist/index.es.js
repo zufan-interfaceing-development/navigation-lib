@@ -1,8 +1,8 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import React from 'react';
-import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ZFNavigationBar = ({
@@ -13,7 +13,10 @@ const ZFNavigationBar = ({
   right
 }) => {
   return /*#__PURE__*/React.createElement(Container, {
-    fluid: true
+    fluid: true,
+    style: {
+      border: '3px solid red'
+    }
   }, /*#__PURE__*/React.createElement(Navbar, {
     bg: dark ? 'dark' : 'light',
     variant: dark ? 'dark' : 'light',

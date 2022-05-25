@@ -2,20 +2,20 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+var React = require('react');
+var PropTypes = require('prop-types');
 var Container = require('react-bootstrap/Container');
 var Navbar = require('react-bootstrap/Navbar');
 var Nav = require('react-bootstrap/Nav');
-var React = require('react');
-var PropTypes = require('prop-types');
 require('bootstrap/dist/css/bootstrap.min.css');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
+var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
+var PropTypes__default = /*#__PURE__*/_interopDefaultLegacy(PropTypes);
 var Container__default = /*#__PURE__*/_interopDefaultLegacy(Container);
 var Navbar__default = /*#__PURE__*/_interopDefaultLegacy(Navbar);
 var Nav__default = /*#__PURE__*/_interopDefaultLegacy(Nav);
-var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
-var PropTypes__default = /*#__PURE__*/_interopDefaultLegacy(PropTypes);
 
 const ZFNavigationBar = ({
   dark = true,
@@ -25,7 +25,10 @@ const ZFNavigationBar = ({
   right
 }) => {
   return /*#__PURE__*/React__default["default"].createElement(Container__default["default"], {
-    fluid: true
+    fluid: true,
+    style: {
+      border: '3px solid red'
+    }
   }, /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"], {
     bg: dark ? 'dark' : 'light',
     variant: dark ? 'dark' : 'light',
