@@ -26,11 +26,13 @@ export default [
                 minimize: false,
               }),
             babel({
-                exclude: 'node_modules/**',
+                //exclude: 'node_modules/**',
                 presets: ["@babel/preset-react"]
             }),
             external(),
-            resolve({}),
+            resolve({
+                moduleDirectories: ['node_modules']
+            }),
         ]
     }
 ]
