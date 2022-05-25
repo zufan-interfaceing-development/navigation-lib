@@ -1,6 +1,10 @@
 import babel from 'rollup-plugin-babel'
 import resolve from '@rollup/plugin-node-resolve'
 import external from 'rollup-plugin-peer-deps-external'
+import postcss from 'rollup-plugin-postcss';
+import scss from 'rollup-plugin-scss'
+import autoprefixer from 'autoprefixer';
+
 export default [
     {
         input: './src/index.js', //entry point
@@ -16,12 +20,17 @@ export default [
             }
         ],
         plugins: [
+            scss(),
+            postcss({
+                plugins: [autoprefixer],
+                minimize: false,
+              }),
             babel({
                 exclude: 'node_modules/**',
                 presets: ["@babel/preset-react"]
             }),
             external(),
-            resolve(),
+            resolve({}),
         ]
     }
 ]

@@ -1,9 +1,18 @@
 
 import React from 'react';
+import PropTypes from 'prop-types'; 
+
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import PropTypes from 'prop-types'; 
+
+import "./navigation-bar.scss"
+const styles = {
+  border: '3px solid red', 
+};
+
+
+
 
 export const ZFNavigationBar = ({dark=true, brandName, left, center, right })=>{
   return(
@@ -23,6 +32,8 @@ export const ZFNavigationBar = ({dark=true, brandName, left, center, right })=>{
     
   )
 }
+
+
 
 ZFNavigationBar.PropTypes={
   dark:PropTypes.bool,

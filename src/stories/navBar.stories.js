@@ -5,7 +5,7 @@ import ZFDropDownItem from "../components/Navagtion/dropDown"
 export default {
     title: "Navigation",
     component: ZFNavigationBar,
-    subcomponents :{ ZFNavItems, ZFDropDownItem}
+    subcomponents : [ZFNavItems, ZFDropDownItem]
 }
 
 const navItemsLink = [
@@ -16,13 +16,13 @@ const navItemsLink = [
 
 
 const Items = (args) => <ZFNavItems {...args} />;
-export const ItemOfMenu = Items.bind({})
+const ItemOfMenu = Items.bind({})
 ItemOfMenu.args={
     lable:"Home"
 }
 
 const DropThatMenu = (args) => <ZFDropDownItem {...args} />;
-export const dropItems = DropThatMenu.bind({})
+/*export*/ const dropItems = DropThatMenu.bind({})
 dropItems.args={
     lable:navItemsLink,
     title: "Nav"
