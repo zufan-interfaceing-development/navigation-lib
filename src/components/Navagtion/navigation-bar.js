@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./navigation-bar.scss"
+
 const styles = {
   border: '3px solid red', 
 };
