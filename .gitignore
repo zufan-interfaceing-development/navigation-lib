@@ -6,7 +6,7 @@ node_modules
 *.txt
 rollup.config.js
 postcss.config.js
-/notes
+notes
 *.txt
 
 .storybook
