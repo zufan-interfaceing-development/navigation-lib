@@ -25,7 +25,8 @@ const ZFNavigationBar = ({
   brandOnClick,
   left,
   center,
-  right
+  right,
+  brandStyling
 }) => {
   const [darkMode, setDarkMode] = React.useState();
   const [textsColor, setTextsColor] = React.useState();
@@ -60,7 +61,8 @@ const ZFNavigationBar = ({
     style: style.txtColor ? style.txtColor : ''
   }, /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"].Brand, {
     href: brandLink,
-    onClick: brandOnClick
+    onClick: brandOnClick,
+    style: brandStyling
   }, brand), /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"].Toggle, null), /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"].Collapse, {
     className: "justify-content-between"
   }, /*#__PURE__*/React__default["default"].createElement(Nav__default["default"], null, left), /*#__PURE__*/React__default["default"].createElement(Nav__default["default"], null, center), /*#__PURE__*/React__default["default"].createElement(Nav__default["default"], null, right))));
@@ -73,7 +75,8 @@ ZFNavigationBar.PropTypes = {
   navBarBackgroundColor: PropTypes__default["default"].string,
   left: PropTypes__default["default"].oneOfType([PropTypes__default["default"].element, PropTypes__default["default"].string]),
   center: PropTypes__default["default"].oneOfType([PropTypes__default["default"].element, PropTypes__default["default"].string]),
-  right: PropTypes__default["default"].oneOfType([PropTypes__default["default"].element, PropTypes__default["default"].string])
+  right: PropTypes__default["default"].oneOfType([PropTypes__default["default"].element, PropTypes__default["default"].string]),
+  brandStyling: PropTypes__default["default"].object
 };
 
 exports.ZFNavigationBar = ZFNavigationBar;

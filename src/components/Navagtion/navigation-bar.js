@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export const ZFNavigationBar = ({dark, brand, brandLink, navBarBackgroundColor, brandOnClick, left, center, right})=>{
+export const ZFNavigationBar = ({dark, brand, brandLink, navBarBackgroundColor, brandOnClick, left, center, right, brandStyling})=>{
   const[darkMode, setDarkMode]=useState()
   const[textsColor, setTextsColor]=useState()
   const[navBgColor, setNavBgColor]=useState()
@@ -38,7 +38,7 @@ export const ZFNavigationBar = ({dark, brand, brandLink, navBarBackgroundColor, 
   return(
       <Navbar bg={darkMode} variant={darkMode} expand="lg" style={style.navContainer}>
        <Container style={style.txtColor? style.txtColor:''}>
-       <Navbar.Brand href={brandLink} onClick={brandOnClick}>{brand}</Navbar.Brand>
+       <Navbar.Brand href={brandLink} onClick={brandOnClick} style={brandStyling}>{brand}</Navbar.Brand>
           <Navbar.Toggle/>
           <Navbar.Collapse className='justify-content-between'>
               <Nav>{left}</Nav>
@@ -59,6 +59,7 @@ ZFNavigationBar.PropTypes= {
   left: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   center: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   right: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+  brandStyling: PropTypes.object,
 
 }
 

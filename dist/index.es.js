@@ -13,7 +13,8 @@ const ZFNavigationBar = ({
   brandOnClick,
   left,
   center,
-  right
+  right,
+  brandStyling
 }) => {
   const [darkMode, setDarkMode] = useState();
   const [textsColor, setTextsColor] = useState();
@@ -48,7 +49,8 @@ const ZFNavigationBar = ({
     style: style.txtColor ? style.txtColor : ''
   }, /*#__PURE__*/React.createElement(Navbar.Brand, {
     href: brandLink,
-    onClick: brandOnClick
+    onClick: brandOnClick,
+    style: brandStyling
   }, brand), /*#__PURE__*/React.createElement(Navbar.Toggle, null), /*#__PURE__*/React.createElement(Navbar.Collapse, {
     className: "justify-content-between"
   }, /*#__PURE__*/React.createElement(Nav, null, left), /*#__PURE__*/React.createElement(Nav, null, center), /*#__PURE__*/React.createElement(Nav, null, right))));
@@ -61,7 +63,8 @@ ZFNavigationBar.PropTypes = {
   navBarBackgroundColor: PropTypes.string,
   left: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   center: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
-  right: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
+  right: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+  brandStyling: PropTypes.object
 };
 
 export { ZFNavigationBar };
