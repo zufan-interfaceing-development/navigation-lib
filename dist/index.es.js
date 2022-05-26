@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
@@ -6,35 +6,64 @@ import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ZFNavigationBar = ({
-  dark = false,
-  brandName,
+  dark,
+  brand,
+  brandLink,
+  navBarBackgroundColor,
+  brandOnClick,
   left,
   center,
-  right
+  right,
+  textColor = dark == 'dark' ? '#f7f7f7' : '#292b2c'
 }) => {
-  dark = dark ? 'dark' : 'light';
-  const textColor = dark == 'dark' ? '#f7f7f7' : '#292b2c';
-  return /*#__PURE__*/React.createElement(Navbar, {
-    bg: dark,
-    variant: dark,
-    expand: "lg"
-  }, /*#__PURE__*/React.createElement(Container, {
-    fluid: true,
-    style: {
-      color: textColor
+  const [darkMode, setDarkMode] = useState();
+  const [textsColor, setTextsColor] = useState();
+  const [navBgColor, setNavBgColor] = useState();
+  useEffect(() => {
+    if (navBarBackgroundColor || navBarBackgroundColor > 0) {
+      setNavBgColor(navBarBackgroundColor);
+      setDarkMode();
+    } else {
+      dark = dark ? 'dark' : 'light';
+      setNavBgColor();
+      setDarkMode(dark);
     }
-  }, brandName ? /*#__PURE__*/React.createElement(Navbar.Brand, {
-    href: "#"
-  }, brandName) : '', /*#__PURE__*/React.createElement(Navbar.Toggle, null), /*#__PURE__*/React.createElement(Navbar.Collapse, {
+
+    if (textColor == '') textColor = dark == 'dark' ? '#f7f7f7' : '#292b2c';
+    setTextsColor(textColor);
+  }, [dark, navBarBackgroundColor, textColor]);
+  const style = {
+    navContainer: {
+      backgroundColor: navBgColor
+    },
+    txtColor: {
+      color: textsColor
+    }
+  };
+  return /*#__PURE__*/React.createElement(Navbar, {
+    bg: darkMode,
+    variant: darkMode,
+    expand: "lg",
+    style: style.navContainer
+  }, /*#__PURE__*/React.createElement(Container, {
+    style: style.txtColor ? style.txtColor : ''
+  }, /*#__PURE__*/React.createElement(Navbar.Brand, {
+    href: brandLink,
+    onClick: brandOnClick
+  }, brand), /*#__PURE__*/React.createElement(Navbar.Toggle, null), /*#__PURE__*/React.createElement(Navbar.Collapse, {
     className: "justify-content-between"
   }, /*#__PURE__*/React.createElement(Nav, null, left), /*#__PURE__*/React.createElement(Nav, null, center), /*#__PURE__*/React.createElement(Nav, null, right))));
 };
 ZFNavigationBar.PropTypes = {
   dark: PropTypes.bool,
-  brandName: PropTypes.string,
-  left: PropTypes.object,
-  center: PropTypes.object,
-  right: PropTypes.object
+  brand: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+  brandLink: PropTypes.string,
+  brandOnClick: PropTypes.func,
+  navBarBackgroundColor: PropTypes.string,
+  left: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+  center: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+  right: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+  textColor: PropTypes.string
 };
 
 export { ZFNavigationBar };
