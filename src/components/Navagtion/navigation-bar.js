@@ -9,9 +9,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const ZFNavigationBar = ({dark=true, brandName, left, center, right })=>{
   return(
-    <Container fluid style={{border: '3px solid red'}}>
+    
       <Navbar bg={dark?'dark':'light'} variant={dark?'dark':'light'} expand="lg">
-        <Container fluid>
+       <Container fluid style={{border: '3px solid red'}}>
           {brandName?<Navbar.Brand href="#">{brandName}</Navbar.Brand>:''}
           <Navbar.Toggle/>
           <Navbar.Collapse className='justify-content-between'>
@@ -19,14 +19,12 @@ export const ZFNavigationBar = ({dark=true, brandName, left, center, right })=>{
               <Nav>{center}</Nav>
               <Nav>{right}</Nav>
           </Navbar.Collapse>
-        </Container>
+          </Container>
       </Navbar>
-    </Container>
+   
     
   )
 }
-
-
 
 ZFNavigationBar.PropTypes={
   dark:PropTypes.bool,

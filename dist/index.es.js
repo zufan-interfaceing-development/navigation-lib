@@ -12,22 +12,20 @@ const ZFNavigationBar = ({
   center,
   right
 }) => {
-  return /*#__PURE__*/React.createElement(Container, {
-    fluid: true,
-    style: {
-      border: '3px solid red'
-    }
-  }, /*#__PURE__*/React.createElement(Navbar, {
+  return /*#__PURE__*/React.createElement(Navbar, {
     bg: dark ? 'dark' : 'light',
     variant: dark ? 'dark' : 'light',
     expand: "lg"
   }, /*#__PURE__*/React.createElement(Container, {
-    fluid: true
+    fluid: true,
+    style: {
+      border: '3px solid red'
+    }
   }, brandName ? /*#__PURE__*/React.createElement(Navbar.Brand, {
     href: "#"
   }, brandName) : '', /*#__PURE__*/React.createElement(Navbar.Toggle, null), /*#__PURE__*/React.createElement(Navbar.Collapse, {
     className: "justify-content-between"
-  }, /*#__PURE__*/React.createElement(Nav, null, left), /*#__PURE__*/React.createElement(Nav, null, center), /*#__PURE__*/React.createElement(Nav, null, right)))));
+  }, /*#__PURE__*/React.createElement(Nav, null, left), /*#__PURE__*/React.createElement(Nav, null, center), /*#__PURE__*/React.createElement(Nav, null, right))));
 };
 ZFNavigationBar.PropTypes = {
   dark: PropTypes.bool,

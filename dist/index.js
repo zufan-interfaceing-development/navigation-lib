@@ -24,22 +24,20 @@ const ZFNavigationBar = ({
   center,
   right
 }) => {
-  return /*#__PURE__*/React__default["default"].createElement(Container__default["default"], {
-    fluid: true,
-    style: {
-      border: '3px solid red'
-    }
-  }, /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"], {
+  return /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"], {
     bg: dark ? 'dark' : 'light',
     variant: dark ? 'dark' : 'light',
     expand: "lg"
   }, /*#__PURE__*/React__default["default"].createElement(Container__default["default"], {
-    fluid: true
+    fluid: true,
+    style: {
+      border: '3px solid red'
+    }
   }, brandName ? /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"].Brand, {
     href: "#"
   }, brandName) : '', /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"].Toggle, null), /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"].Collapse, {
     className: "justify-content-between"
-  }, /*#__PURE__*/React__default["default"].createElement(Nav__default["default"], null, left), /*#__PURE__*/React__default["default"].createElement(Nav__default["default"], null, center), /*#__PURE__*/React__default["default"].createElement(Nav__default["default"], null, right)))));
+  }, /*#__PURE__*/React__default["default"].createElement(Nav__default["default"], null, left), /*#__PURE__*/React__default["default"].createElement(Nav__default["default"], null, center), /*#__PURE__*/React__default["default"].createElement(Nav__default["default"], null, right))));
 };
 ZFNavigationBar.PropTypes = {
   dark: PropTypes__default["default"].bool,
