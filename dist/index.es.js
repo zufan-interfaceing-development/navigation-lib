@@ -14,7 +14,7 @@ const ZFNavigationBar = ({
   left,
   center,
   right,
-  textColor = dark == 'dark' ? '#f7f7f7' : '#292b2c'
+  textColor
 }) => {
   const [darkMode, setDarkMode] = useState();
   const [textsColor, setTextsColor] = useState();

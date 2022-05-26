@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export const ZFNavigationBar = ({dark, brand, brandLink, navBarBackgroundColor, brandOnClick, left, center, right, textColor = dark =='dark'? '#f7f7f7': '#292b2c'})=>{
+export const ZFNavigationBar = ({dark, brand, brandLink, navBarBackgroundColor, brandOnClick, left, center, right, textColor})=>{
   const[darkMode, setDarkMode]=useState()
   const[textsColor, setTextsColor]=useState()
   const[navBgColor, setNavBgColor]=useState()
