@@ -25,8 +25,7 @@ const ZFNavigationBar = ({
   brandOnClick,
   left,
   center,
-  right,
-  textColor
+  right
 }) => {
   const [darkMode, setDarkMode] = React.useState();
   const [textsColor, setTextsColor] = React.useState();
@@ -41,9 +40,9 @@ const ZFNavigationBar = ({
       setDarkMode(dark);
     }
 
-    if (textColor == '') textColor = dark == 'dark' ? '#f7f7f7' : '#292b2c';
+    const textColor = dark == 'dark' ? '#f7f7f7' : '#292b2c';
     setTextsColor(textColor);
-  }, [dark, navBarBackgroundColor, textColor]);
+  }, [dark, navBarBackgroundColor]);
   const style = {
     navContainer: {
       backgroundColor: navBgColor
@@ -74,8 +73,7 @@ ZFNavigationBar.PropTypes = {
   navBarBackgroundColor: PropTypes__default["default"].string,
   left: PropTypes__default["default"].oneOfType([PropTypes__default["default"].element, PropTypes__default["default"].string]),
   center: PropTypes__default["default"].oneOfType([PropTypes__default["default"].element, PropTypes__default["default"].string]),
-  right: PropTypes__default["default"].oneOfType([PropTypes__default["default"].element, PropTypes__default["default"].string]),
-  textColor: PropTypes__default["default"].string
+  right: PropTypes__default["default"].oneOfType([PropTypes__default["default"].element, PropTypes__default["default"].string])
 };
 
 exports.ZFNavigationBar = ZFNavigationBar;

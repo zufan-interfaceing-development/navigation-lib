@@ -60,7 +60,6 @@ NavbarBgColor.args={
     center: 'center',
     right: 'right',
     navBarBackgroundColor: '',
-    textColor: ''
 }
 
 

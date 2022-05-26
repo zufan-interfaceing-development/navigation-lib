@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export const ZFNavigationBar = ({dark, brand, brandLink, navBarBackgroundColor, brandOnClick, left, center, right, textColor})=>{
+export const ZFNavigationBar = ({dark, brand, brandLink, navBarBackgroundColor, brandOnClick, left, center, right})=>{
   const[darkMode, setDarkMode]=useState()
   const[textsColor, setTextsColor]=useState()
   const[navBgColor, setNavBgColor]=useState()
@@ -21,9 +21,9 @@ export const ZFNavigationBar = ({dark, brand, brandLink, navBarBackgroundColor, 
       setNavBgColor()
       setDarkMode(dark);
     }
-    if (textColor=='')textColor=dark =='dark'? '#f7f7f7': '#292b2c';
+    const textColor=dark =='dark'? '#f7f7f7': '#292b2c';
     setTextsColor(textColor)
-  },[dark, navBarBackgroundColor, textColor])
+  },[dark, navBarBackgroundColor])
   
 
   const style = {
@@ -59,7 +59,7 @@ ZFNavigationBar.PropTypes= {
   left: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   center: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   right: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
-  textColor: PropTypes.string,
+
 }
 
 
