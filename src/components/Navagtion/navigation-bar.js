@@ -7,11 +7,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export const ZFNavigationBar = ({dark=true, brandName, left, center, right })=>{
+export const ZFNavigationBar = ({dark=false, brandName, left, center, right })=>{
+  dark=dark?'dark':'light'
+  const textColor = dark =='dark'? '#f7f7f7': '#292b2c'
   return(
-    
-      <Navbar bg={dark?'dark':'light'} variant={dark?'dark':'light'} expand="lg">
-       <Container fluid>
+      <Navbar bg={dark} variant={dark} expand="lg">
+       <Container fluid style={{color:textColor}}>
           {brandName?<Navbar.Brand href="#">{brandName}</Navbar.Brand>:''}
           <Navbar.Toggle/>
           <Navbar.Collapse className='justify-content-between'>

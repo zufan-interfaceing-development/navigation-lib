@@ -18,18 +18,23 @@ var Navbar__default = /*#__PURE__*/_interopDefaultLegacy(Navbar);
 var Nav__default = /*#__PURE__*/_interopDefaultLegacy(Nav);
 
 const ZFNavigationBar = ({
-  dark = true,
+  dark = false,
   brandName,
   left,
   center,
   right
 }) => {
+  dark = dark ? 'dark' : 'light';
+  const textColor = dark == 'dark' ? '#f7f7f7' : '#292b2c';
   return /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"], {
-    bg: dark ? 'dark' : 'light',
-    variant: dark ? 'dark' : 'light',
+    bg: dark,
+    variant: dark,
     expand: "lg"
   }, /*#__PURE__*/React__default["default"].createElement(Container__default["default"], {
-    fluid: true
+    fluid: true,
+    style: {
+      color: textColor
+    }
   }, brandName ? /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"].Brand, {
     href: "#"
   }, brandName) : '', /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"].Toggle, null), /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"].Collapse, {

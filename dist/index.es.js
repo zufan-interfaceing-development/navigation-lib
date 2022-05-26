@@ -6,18 +6,23 @@ import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ZFNavigationBar = ({
-  dark = true,
+  dark = false,
   brandName,
   left,
   center,
   right
 }) => {
+  dark = dark ? 'dark' : 'light';
+  const textColor = dark == 'dark' ? '#f7f7f7' : '#292b2c';
   return /*#__PURE__*/React.createElement(Navbar, {
-    bg: dark ? 'dark' : 'light',
-    variant: dark ? 'dark' : 'light',
+    bg: dark,
+    variant: dark,
     expand: "lg"
   }, /*#__PURE__*/React.createElement(Container, {
-    fluid: true
+    fluid: true,
+    style: {
+      color: textColor
+    }
   }, brandName ? /*#__PURE__*/React.createElement(Navbar.Brand, {
     href: "#"
   }, brandName) : '', /*#__PURE__*/React.createElement(Navbar.Toggle, null), /*#__PURE__*/React.createElement(Navbar.Collapse, {
