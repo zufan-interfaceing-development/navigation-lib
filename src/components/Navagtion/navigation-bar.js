@@ -20,9 +20,7 @@ export const ZFNavigationBar = ({dark=true, brandName, left, center, right })=>{
               <Nav>{right}</Nav>
           </Navbar.Collapse>
           </Container>
-      </Navbar>
-   
-    
+      </Navbar>    
   )
 }
 
