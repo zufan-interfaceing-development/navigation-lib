@@ -11,7 +11,7 @@ export const ZFNavigationBar = ({dark=true, brandName, left, center, right })=>{
   return(
     
       <Navbar bg={dark?'dark':'light'} variant={dark?'dark':'light'} expand="lg">
-       <Container fluid style={{border: '3px solid red'}}>
+       <Container fluid>
           {brandName?<Navbar.Brand href="#">{brandName}</Navbar.Brand>:''}
           <Navbar.Toggle/>
           <Navbar.Collapse className='justify-content-between'>

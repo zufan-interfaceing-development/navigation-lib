@@ -29,10 +29,7 @@ const ZFNavigationBar = ({
     variant: dark ? 'dark' : 'light',
     expand: "lg"
   }, /*#__PURE__*/React__default["default"].createElement(Container__default["default"], {
-    fluid: true,
-    style: {
-      border: '3px solid red'
-    }
+    fluid: true
   }, brandName ? /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"].Brand, {
     href: "#"
   }, brandName) : '', /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"].Toggle, null), /*#__PURE__*/React__default["default"].createElement(Navbar__default["default"].Collapse, {
