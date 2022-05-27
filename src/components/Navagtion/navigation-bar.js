@@ -62,6 +62,3 @@ ZFNavigationBar.PropTypes= {
   brandStyling: PropTypes.object,
 
 }
-
-
-

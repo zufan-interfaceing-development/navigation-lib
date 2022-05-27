@@ -1,12 +1,12 @@
 {
-  "name": "@zufan_dev/navigation-lib",
-  "version": "1.2.4",
+  "name": "zufans-quck-nav",
+  "version": "1.1.1",
   "description": "navigation-library",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zufan-interfaceing-development/navigation-lib.git"
+    "url": "git+https://github.com/zufans/navigation.git"
   },
   "scripts": {
     "storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",

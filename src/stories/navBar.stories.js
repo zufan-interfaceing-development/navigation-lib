@@ -62,8 +62,3 @@ NavbarBgColor.args={
     navBarBackgroundColor: '',
 }
 
-
- 
-  
-  
-  //brandOnClick: PropTypes.func,
