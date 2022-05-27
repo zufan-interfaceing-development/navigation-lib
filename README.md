@@ -1,6 +1,5 @@
 ## README
 <p>This is a Navigation bar component for react application.</p>
-<br>
 
 ### Installtion
 <code>npm install @zufans/quick-nav</code>
