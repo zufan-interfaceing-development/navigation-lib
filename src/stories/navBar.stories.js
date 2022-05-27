@@ -1,11 +1,11 @@
 import React from "react"
-import {ZFNavigationBar} from "../components/Navagtion/navigation-bar"
+import QuickNav from "../components/Navagtion/navigation-bar"
 import ZFNavItems from "../components/Navagtion/items"
 import ZFDropDownItem from "../components/Navagtion/dropDown"
 
 export default {
     title: "Navigation",
-    component: ZFNavigationBar,
+    component: QuickNav,
     subcomponents : [ZFNavItems, ZFDropDownItem]
 }
 
@@ -32,7 +32,7 @@ dropItems.args={
 
 
 
-const Temp = (args) => (<ZFNavigationBar {...args}/>);
+const Temp = (args) => (<QuickNav {...args}/>);
 export const Nav = Temp.bind({});
 Nav.args={
     dark: true,
@@ -59,6 +59,5 @@ NavbarBgColor.args={
     left: "left",
     center: 'center',
     right: 'right',
-    navBarBackgroundColor: '',
 }
 
