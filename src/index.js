@@ -1,1 +1,5 @@
-export * from './components/Navagtion'
+import QuickNav from './components/Navagtion'
+
+
+
+export default QuickNav
