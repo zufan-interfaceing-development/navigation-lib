@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function QuickNav ({dark, brand, brandLink, brandOnClick, left, center, right, brandStyling}) {
+const QuickNav = ({dark, brand, brandLink, brandOnClick, left, center, right, brandStyling})=> {
   const[darkMode, setDarkMode]=useState()
   const[textsColor, setTextsColor]=useState()
 
@@ -53,3 +53,5 @@ QuickNav.PropTypes= {
   right: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   brandStyling: PropTypes.object,
 }
+
+export default QuickNav
