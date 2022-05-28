@@ -1,5 +1,7 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var React = require('react');
 var PropTypes = require('prop-types');
 var Container = require('react-bootstrap/Container');
@@ -64,4 +66,4 @@ QuickNav.PropTypes = {
   brandStyling: PropTypes__default["default"].object
 };
 
-module.exports = QuickNav;
+exports["default"] = QuickNav;

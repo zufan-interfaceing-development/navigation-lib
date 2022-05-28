@@ -1,6 +1,6 @@
 import React from "react"
-//import QuickNav from "../components/Navagtion/navigation-bar"
-import QuickNav from "../components/Navagtion";
+import QuickNav from "../components/Navagtion/navigation-bar"
+
 
 export default {
     title: "zufan/Navigation",
