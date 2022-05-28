@@ -10,11 +10,7 @@ export default [
     {
         input: './src/index.js', //entry point
         output: [
-            {
-                file: 'dist/index.js',
-                format: 'cjs',
-                exports: 'named',
-            },
+            
             {
                 file: 'dist/index.es.js',
                 format: 'es',
